@@ -38,8 +38,7 @@ gcloud compute instances describe $instance_name \
 
 #Project ID
 echo Project ID:
-gcloud compute instances describe $instance_name \
-	--format='get(disks[0].source)'
+gcloud config get-value project
 
 #List of all users that logged into this instance
 #echo List of all logged instance users:
